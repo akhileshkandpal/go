@@ -5,12 +5,16 @@ import (
 )
 
 func main() {
-	x := 786
-	if x < 500 {
-		fmt.Printf("%v is less than 1000\n.", x)
-	} else if x < 1000 {
-		fmt.Printf("%v is also less than 1000\n.", x)
-	} else {
-		fmt.Printf("%v is more than 1000\n.", x)
+	x := []string{"James", "Bond", "shaken, not stirred"}
+	y := []string{"Miss", "Moneypanny", "Hellooooo James."}
+	z := [][]string{x, y}
+	fmt.Println(x)
+	fmt.Println(y)
+	fmt.Println(z)
+	for i, s := range z {
+		fmt.Println("Record : ", i)
+		for j, w := range s {
+			fmt.Printf("\tindex position : %v\tvalue:\t%v\n ", j, w)
+		}
 	}
 }

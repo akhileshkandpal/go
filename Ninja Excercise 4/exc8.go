@@ -5,14 +5,16 @@ import (
 )
 
 func main() {
-	switch {
-	case false:
-		fmt.Println("1 - this will not print")
-	case (2 == 3):
-		fmt.Println("2 - this will also not print")
-	case (2 == 2):
-		fmt.Println("3 - this will print")
-	default:
-		fmt.Println("4 - this is default")
+	x := map[string][]string{
+		"bond james":     []string{"Shaken,not stirred", "Martinis", "Women"},
+		"monepanny miss": []string{"James Bond", "Literature", "Computer Science"},
+		"no dr":          []string{"Being Evil", "Ice Cream", "Sunset"},
+	}
+
+	for k, v := range x {
+		fmt.Println("This is the record for", k)
+		for i, v2 := range v {
+			fmt.Println("\t", i, v2)
+		}
 	}
 }

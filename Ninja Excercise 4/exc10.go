@@ -12,6 +12,7 @@ func main() {
 	}
 
 	x["Akhilesh"] = []string{"Akhi,nam to suna hoga", "Samosa", "Golang"}
+	delete(x, "no dr")
 	for k, v := range x {
 		fmt.Println("This is the record for", k)
 		for i, v2 := range v {
